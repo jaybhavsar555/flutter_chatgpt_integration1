@@ -10,21 +10,24 @@ class ChatPage extends StatefulWidget {
 }
 
 class _ChatPageState extends State<ChatPage> {
-  final ChatUser _currentUser= ChatUser(id: "1",firstName: "Mocking",lastName: "Bird");
+  final ChatUser _currentUser =
+      ChatUser(id: "1", firstName: "Mocking", lastName: "Bird");
 
-  final ChatUser _chatgptUser= ChatUser(id: "2",firstName: "Chat",lastName: "GPT");
+  final ChatUser _chatgptUser =
+      ChatUser(id: "2", firstName: "Chat", lastName: "GPT");
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.greenAccent,
-        title: Text("Flutter Chatgpt", style: TextStyle(
-          color: Colors.white
-        ),),
-
+        title: Text(
+          "Flutter Chatgpt",
+          style: TextStyle(color: Colors.white),
+        ),
       ),
-      // body: DashChat(currentUser: currentUser, onSend: onSend, messages: messages),
+      body: DashChat(
+          currentUser: currentUser, onSend: onSend, messages: messages),
     );
   }
 }
